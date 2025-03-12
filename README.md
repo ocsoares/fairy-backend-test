@@ -12,14 +12,6 @@
 
 # Sobre o projeto
 
-## Deploy na plataforma Render:
-
-🚀 TALVEZ Fazer... (Link Deploy RENDER) <br>
-
-Esse é um desafio técnico para desenvolvedor backend da empresa **Fairy**
-
-⚠️ **ATENÇÃO**: O site pode demorar a carregar porque o servidor **desliga** após um tempo sem uso
-
 # Documentação
 
 Documentação feita com a ferramenta Swagger na rota **/docs**
