@@ -38,6 +38,8 @@ async function bootstrap() {
     });
 
     await app.listen(App.port());
+
+    console.log(`The server is running on ${App.host()}:${App.port()}`);
 }
 
 bootstrap();
