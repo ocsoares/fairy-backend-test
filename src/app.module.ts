@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { ProductModule } from "./modules/product/product.module";
+import { TaskModule } from './modules/task/task.module';
 import { PrismaDatabaseModule } from "./repositories/implementations/prisma/prisma-database.module";
 
 @Module({
@@ -10,7 +10,7 @@ import { PrismaDatabaseModule } from "./repositories/implementations/prisma/pris
             envFilePath: ".env",
         }),
         PrismaDatabaseModule,
-        ProductModule,
+        TaskModule,
     ],
 })
 export class AppModule { }

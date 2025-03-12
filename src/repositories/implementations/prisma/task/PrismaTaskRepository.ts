@@ -1,0 +1,20 @@
+import { Injectable } from "@nestjs/common";
+import { TaskEntity } from "src/entity/TaskEntity";
+import { CreateTaskDTO } from "src/modules/task/use-cases/create-task/dtos/CreateTaskDTO";
+import { TaskRepository } from "src/repositories/abstracts/TaskRepository";
+import { PrismaService } from "../prisma-client.service";
+
+@Injectable()
+export class PrismaTaskRepository implements TaskRepository {
+    constructor(private readonly prismaService: PrismaService) { }
+
+    async create(data: CreateTaskDTO): Promise<TaskEntity> {
+        return await this.prismaService.task.create({
+            data: { ...data }
+        });
+    }
+
+    async findById(id: number): Promise<TaskEntity | null> {
+        return await this.prismaService.task.findUnique({ where: { id } });
+    }
+}

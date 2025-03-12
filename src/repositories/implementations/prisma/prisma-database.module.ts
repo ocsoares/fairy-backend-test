@@ -1,19 +1,18 @@
 import { Global, Module } from "@nestjs/common";
-import { ProductRepository } from "../../../repositories/abstracts/ProductRepository";
+import { TaskRepository } from "src/repositories/abstracts/TaskRepository";
 import { PrismaService } from "./prisma-client.service";
-import { PrismaProductRepository } from "./product/PrismaProductRepository";
+import { PrismaTaskRepository } from "./task/PrismaTaskRepository";
 
 @Global()
 @Module({
     providers: [
         PrismaService,
-
         {
-            provide: ProductRepository,
-            useClass: PrismaProductRepository,
-        },
+            provide: TaskRepository,
+            useClass: PrismaTaskRepository
+        }
 
     ],
-    exports: [ProductRepository],
+    exports: [TaskRepository],
 })
 export class PrismaDatabaseModule { }
