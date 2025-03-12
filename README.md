@@ -30,9 +30,6 @@ pnpm install (ou npm)
 
 # configurar esse .env baseado no arquivo .env.example
 
-# transpilar os arquivos do projeto para .js
-pnpm run build (ou npm)
-
 # iniciar o container do docker
 docker-compose up -d
 
@@ -41,6 +38,9 @@ pnpm prisma:migrate (ou npm)
 
 # Inicializar o Prisma no projeto
 npx prisma generate
+
+# transpilar os arquivos do projeto para .js
+pnpm run build (ou npm)
 
 # executar o projeto
 pnpm start (ou npm)
