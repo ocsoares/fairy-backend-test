@@ -4,4 +4,5 @@ import { CreateTaskDTO } from "src/modules/task/use-cases/create-task/dtos/Creat
 export abstract class TaskRepository {
     abstract create(data: CreateTaskDTO): Promise<TaskEntity>;
     abstract findById(id: number): Promise<TaskEntity | null>;
+    abstract findAll(page: number, limit: number): Promise<TaskEntity[]>;
 }

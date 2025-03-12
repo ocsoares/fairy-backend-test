@@ -17,4 +17,11 @@ export class PrismaTaskRepository implements TaskRepository {
     async findById(id: number): Promise<TaskEntity | null> {
         return await this.prismaService.task.findUnique({ where: { id } });
     }
+
+    async findAll(page: number, limit: number): Promise<TaskEntity[]> {
+        return await this.prismaService.task.findMany({
+            skip: (page - 1) * limit,
+            take: limit
+        });
+    }
 }
