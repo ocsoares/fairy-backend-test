@@ -7,4 +7,5 @@ export abstract class TaskRepository {
     abstract findById(id: number): Promise<TaskEntity | null>;
     abstract findAll(page: number, limit: number): Promise<TaskEntity[]>;
     abstract updateById(id: number, data: UpdateTaskDTO): Promise<TaskEntity>;
+    abstract deleteById(id: number): Promise<void>;
 }

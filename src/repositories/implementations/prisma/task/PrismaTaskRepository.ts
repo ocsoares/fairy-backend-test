@@ -29,4 +29,8 @@ export class PrismaTaskRepository implements TaskRepository {
     async updateById(id: number, data: UpdateTaskDTO): Promise<TaskEntity> {
         return await this.prismaService.task.update({ where: { id }, data: { ...data } });
     }
+
+    async deleteById(id: number): Promise<void> {
+        await this.prismaService.task.delete({ where: { id } });
+    }
 }
