@@ -10,11 +10,10 @@
 
 💼 https://www.linkedin.com/in/ocauasoares
 
-# Sobre o projeto
-
 # Documentação
 
-Documentação feita com a ferramenta Swagger na rota **/docs**
+Documentação feita com a ferramenta Swagger na rota **/docs**  
+(Porta **PADRÃO** é a **5000**)
 
 # Executar o projeto localmente
 
