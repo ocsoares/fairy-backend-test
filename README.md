@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/neliocursos/exemplo-readme/blob/main/LICENSE)
 
-⚠️ **IMPORTANTE**: Usei como base o meu repositório **"Desafio-BP"** para fazer este, porque a estrutura é a mesma, então algumas libs podem estar **desatualizadas**. 
+⚠️ **IMPORTANTE**: Usei como base a estrutura **PADRÃO** dos meus projetos pessoais, então algumas libs podem estar **desatualizadas**. 
 
 # Autor
 
