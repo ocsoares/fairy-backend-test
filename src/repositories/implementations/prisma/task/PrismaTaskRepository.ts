@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { TaskEntity } from "src/entity/TaskEntity";
 import { CreateTaskDTO } from "src/modules/task/use-cases/create-task/dtos/CreateTaskDTO";
+import { UpdateTaskDTO } from "src/modules/task/use-cases/update-task-by/dtos/UpdateTaskDTO";
 import { TaskRepository } from "src/repositories/abstracts/TaskRepository";
 import { PrismaService } from "../prisma-client.service";
 
@@ -23,5 +24,9 @@ export class PrismaTaskRepository implements TaskRepository {
             skip: (page - 1) * limit,
             take: limit
         });
+    }
+
+    async updateById(id: number, data: UpdateTaskDTO): Promise<TaskEntity> {
+        return await this.prismaService.task.update({ where: { id }, data: { ...data } });
     }
 }

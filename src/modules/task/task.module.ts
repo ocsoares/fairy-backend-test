@@ -6,9 +6,11 @@ import { ListTaskByService } from './use-cases/list-task-by/list-task-by.service
 import { ListTaskByController } from './use-cases/list-task-by/list-task-by.controller';
 import { ListAllTasksService } from './use-cases/list-all-tasks/list-all-tasks.service';
 import { ListAllTasksController } from './use-cases/list-all-tasks/list-all-tasks.controller';
+import { UpdateTaskByService } from './use-cases/update-task-by/update-task-by.service';
+import { UpdateTaskByController } from './use-cases/update-task-by/update-task-by.controller';
 
 @Module({
-  providers: [CreateTaskService, TaskMapper, ListTaskByService, ListAllTasksService],
-  controllers: [CreateTaskController, ListTaskByController, ListAllTasksController]
+  providers: [CreateTaskService, TaskMapper, ListTaskByService, ListAllTasksService, UpdateTaskByService],
+  controllers: [CreateTaskController, ListTaskByController, ListAllTasksController, UpdateTaskByController]
 })
 export class TaskModule { }
