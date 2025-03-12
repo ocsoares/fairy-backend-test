@@ -36,6 +36,12 @@ pnpm run build (ou npm)
 # iniciar o container do docker
 docker-compose up -d
 
+# Aplicar as migrations no Banco de Dados
+pnpm prisma:migrate (ou npm)
+
+# Inicializar o Prisma no projeto
+npx prisma generate
+
 # executar o projeto
 pnpm start (ou npm)
 ```
