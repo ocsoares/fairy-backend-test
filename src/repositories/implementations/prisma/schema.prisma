@@ -10,15 +10,17 @@ datasource db {
     url      = env("POSTGRES_PRISMA_URL")
 }
 
-model Product {
-    id        String   @id @default(uuid())
-    name      String
-    brand     String
-    cnpj      String
-    price     Float
-    hash      String   @unique
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+enum TaskStatus {
+    pending
+    in_progress
+    completed
+}
 
-    @@map("products")
+model Task {
+    id          Int        @id @default(autoincrement())
+    title       String
+    description String?
+    status      TaskStatus @default(pending) // Valores possíveis: pending, in_progress, completed
+    createdAt   DateTime   @default(now())
+    updatedAt   DateTime   @updatedAt
 }
